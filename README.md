@@ -1,7 +1,7 @@
 # WeatherDashboard
 Description:
 
-Workday scheduler is a way to write down your plans for the day when you have work. It has time and says so that you can actually plan specifically.
+Weather Dashboard is a website where you can check the weather of any city that you want. Using this shows the weather for multiple days and can be filtered by results.
 
 
 Screenshot
