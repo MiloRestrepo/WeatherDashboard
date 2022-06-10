@@ -1,0 +1,62 @@
+body{
+    margin: 10px
+}
+
+
+
+#header-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+
+}
+
+input[type=text] {
+    border-style: dotted;
+    border: 2px;
+    border-color: black;
+    
+}
+
+.current-forecast {
+    padding: 1px;
+    margin: 5px
+}
+
+.history-button {
+    width: 100%;
+    background-color: lightgray;
+    margin: 5px;
+    border-color: lightgray;
+    border-radius: 5px;
+    border: 0px;
+    height: 35px
+
+}
+
+#submit-button {
+    width:100%;
+    margin-bottom: 10px;
+    
+}
+
+.future {
+    background-color: rgb(10, 63, 112);
+    color: white;
+    width: 80px;
+    margin: 20px;
+    padding:10px;
+    width: auto;
+
+}
+
+#future-forecast {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+header{
+    background-image: linear-gradient(to right, blue , navy);
+
+}

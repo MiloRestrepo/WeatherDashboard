@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Weather Dashboard</title>
-  </head>
 
-  <body class="flex-column min-100-vh">
-    <header class="hero">
-      <h1 class="app-title"><i class="fab fa-github"></i> Weather Dashboard</h1>
-      <p>
-       Search for a city to find the current weather conditions!
-      </p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--styeleseet for materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--stylesheet for bootsrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header class= "center-align">
+        <div id="header-text">
+            Weather Dashboard
+        </div>
+
     </header>
 
-    <main class="flex-row justify-space-between">
-      <div class="col-12 col-md-4">
-        <div class="card">
-          <h3 class="card-header text-uppercase">Search By City</h3>
-          <form id="user-form" class="card-body">
-            <label class="form-label" for="username">City</label>
-            <input
-              name="username"
-              id="username"
-              type="text"
-              autofocus="true"
-              class="form-input"
-            />
-            <button type="submit" class="btn">Search</button>
-          </form>
+    <div class="row">
+        <!--Search INFO-->
+        <div class="col-3">
+            <!--Search bar/ clear to the left-->
+
+            <div>
+                <form>
+                    <h4>SEARCH FOR A CITY</h4>
+                    <input type="text" placeholder="Enter a city name" name="search" id="search-input">
+                    <button type="submit" id="submit-button" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+
+
+            <!--search history-->
+            <div>
+                <ul id="search-history">
+
+                </ul>
+            </div>
         </div>
+        <!--current forecast appears here-->
+        <main class="col-9">
+            <div class="border border-dark current-forecast">
+                <h1 id="current-city">Your Forecast Here</h1>
+                <p id="current-temp"> </p>
 
-        <div class="card">
-          <h3 class="card-header text-uppercase">Search By Topic</h3>
-          <div id="language-buttons" class="card-body">
-            <button data-language="zipCode" class="btn">Zip Code</button>
-            <button data-language="currentLocation" class="btn">Current Location</button>
-            <button data-language="weatherType" class="btn">Weather Type</button>
-          </div>
-        </div>
-      </div>
+            </div>
+            <!--5 day forecast-->
+            <div>
+                <h5>5-Day Forecast:</h5>
+                <div>
+                    <ul id="future-forecast">
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
 
-      <div class="col-12 col-md-8">
-        <h2 class="subtitle">
-          Showing Weather For: <span id="repo-search-term"></span>
-        </h2>
-        <div id="repos-container" class="list-group"></div>
-      </div>
-    </main>
+    <!--javascript for materialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/js.js"></script>
+</body>
 
-    <script src="./assets/js/homepage.js"></script>
-  </body>
 </html>
